@@ -8,11 +8,7 @@
     <title> قالب مدیریتی </title>
     <link rel="shortcut icon" href="{{ asset('admin_assets/assets/media/image/favicon.png')}}">
     <meta name="theme-color" content="#5867dd">
-    <link rel="stylesheet" href="{{ asset('admin_assets/vendors/bundle.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('admin_assets/vendors/slick/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin_assets/vendors/slick/slick-theme.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('admin_assets/vendors/vmap/jqvmap.min.css') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('admin_assets/assets/css/app.css') }}" type="text/css">
+    @include('admin_end.inlcude.header_styles')
 </head>
 
 <body class="small-navigation">
@@ -400,10 +396,7 @@
         </div>
 
     </main>
-    <script src="{{ asset('admin_assets/vendors/bundle.js') }}"></script>
-    <script src="{{ asset('admin_assets/vendors/slick/slick.min.js') }}"></script>
-    {{-- <script src="{{ asset('admin_assets/vendors/vmap/jquery.vmap.min.js') }}"></script> --}}
-    <script src="{{ asset('admin_assets/assets/js/app.js') }}"></script>
+    @include('admin_end.inlcude.footer_scripts')
 </body>
 
 </html>
