@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\PanelController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,6 @@ Route::get('/', [HomeController::class,'home'])->name('home');
 
 Route::get('/admin/panel', [PanelController::class,'panel'])->name('admin.panel');
 
+Route::get('/admin/users', [UserController::class,'users'])->name('admin.users');
+
+Route::get('/admin/create/user', [UserController::class,'createUser'])->name('admin.user.create');
