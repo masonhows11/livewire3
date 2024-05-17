@@ -38,8 +38,8 @@ return [
     |
     */
 
-    'layout' => 'components.layouts.app',
-
+    //'layout' => 'components.layouts.app',
+    'layout' => 'front_end.include.master',
     /*
     |---------------------------------------------------------------------------
     | Lazy Loading Placeholder

@@ -5,22 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('front_title')</title>
-    @include('front_end.include.header_styles')
+    <livewire:front.layout.header_styles/>
 </head>
 
 <body>
 
-    @include('front_end.include.header')
+    <livewire:front.layout.header/>
 
     <!-- **************** MAIN CONTENT START **************** -->
-    <main>
+    {{ $slot }}
+    {{-- <main>
         @yield('front_main')
-    </main>
+    </main> --}}
     <!-- **************** MAIN CONTENT END **************** -->
 
-    @include('front_end.include.footer')
+    <livewire:front.layout.footer/>
 
-    @include('front_end.include.footer_scripts')
+    <livewire:front.layout.footer_scripts/>
 </body>
 
 

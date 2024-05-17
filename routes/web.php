@@ -1,9 +1,10 @@
 <?php
 
+use App\Livewire\Front\Home;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Admin\PanelController;
+// use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\PanelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +22,9 @@ use App\Http\Controllers\Admin\UserController;
 // });
 
 
-Route::get('/', [HomeController::class,'home'])->name('home');
+// Route::get('/', [HomeController::class,'home'])->name('home');
 
+Route::get('/', Home::class)->name('home');
 
 Route::get('/admin/panel', [PanelController::class,'panel'])->name('admin.panel');
 
