@@ -5,12 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>livewire</title>
-    @include('front_end.include.header_styles')
+
+    {{-- @include('front_end.include.header_styles') --}}
+         <livewire:front.layout.header_styles/>
+
 </head>
 
 <body>
 
-    @include('front_end.include.header')
+    {{-- @include('front_end.include.header') --}}
+
+    <livewire:front.layout.header/>
 
     <!-- **************** MAIN CONTENT START **************** -->
     <main>
@@ -354,11 +359,9 @@
             </div>
             <!-- Content END -->
         </section>
-        <!-- =======================
-Main Banner END -->
+        <!-- =======================Main Banner END -->
 
-        <!-- =======================
-Counter START -->
+        <!-- =======================Counter START -->
         <section class="py-0 py-xl-5">
             <div class="container">
                 <div class="row g-4">
@@ -425,11 +428,9 @@ Counter START -->
                 </div>
             </div>
         </section>
-        <!-- =======================
-Counter END -->
+        <!-- =======================Counter END -->
 
-        <!-- =======================
-Popular course START -->
+        <!-- =======================Popular course START -->
         <section>
             <div class="container">
                 <!-- Title -->
@@ -1543,11 +1544,9 @@ Popular course START -->
                 <!-- Tabs content END -->
             </div>
         </section>
-        <!-- =======================
-Popular course END -->
+        <!-- =======================Popular course END -->
 
-        <!-- =======================
-Action box START -->
+        <!-- =======================Action box START -->
         <section class="pt-0 pt-lg-5">
             <div class="container position-relative">
                 <!-- SVG decoration START -->
@@ -1599,11 +1598,9 @@ Action box START -->
                 </div> <!-- Row END -->
             </div>
         </section>
-        <!-- =======================
-Action box END -->
+        <!-- =======================Action box END -->
 
-        <!-- =======================
-Trending courses START -->
+        <!-- =======================Trending courses START -->
         <section class="pb-5 pt-0 pt-lg-5">
             <div class="container">
                 <!-- Title -->
@@ -1899,11 +1896,9 @@ Trending courses START -->
                 </div>
             </div>
         </section>
-        <!-- =======================
-Trending courses END -->
+        <!-- =======================Trending courses END -->
 
-        <!-- =======================
-Reviews START -->
+        <!-- =======================Reviews START -->
         <section class="bg-light">
             <div class="container">
                 <div class="row g-4 g-lg-5 align-items-center">
@@ -2171,15 +2166,17 @@ Reviews START -->
                 </div> <!-- Row END -->
             </div>
         </section>
-        <!-- =======================
-Reviews END -->
+        <!-- =======================Reviews END -->
 
     </main>
     <!-- **************** MAIN CONTENT END **************** -->
 
-    @include('front_end.include.footer')
+    {{-- @include('front_end.include.footer') --}}
+    <livewire:front.layout.footer/>
 
-    @include('front_end.include.footer_scripts')
+
+    {{-- @include('front_end.include.footer_scripts') --}}
+    <livewire:front.layout.footer_scripts/>
 </body>
 
 
