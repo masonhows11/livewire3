@@ -770,7 +770,7 @@
                                             <div class="row g-0 align-items-center">
                                                 <div class="col-md-5">
                                                     <!-- Image -->
-                                                    <img src="assets/images/instructor/01.jpg" class="img-fluid rounded-3" alt="instructor-image">
+                                                    <img src="{{ asset('front_assets/images/instructor/01.jpg') }}" class="img-fluid rounded-3" alt="instructor-image">
                                                 </div>
                                                 <div class="col-md-7">
                                                     <!-- Card body -->
@@ -975,7 +975,7 @@
                                             <div class="d-md-flex my-4">
                                                 <!-- Avatar -->
                                                 <div class="avatar avatar-xl me-4 flex-shrink-0">
-                                                    <img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg" alt="avatar">
+                                                    <img class="avatar-img rounded-circle" src="{{ asset('front_assets/images/avatar/09.jpg') }}" alt="avatar">
                                                 </div>
                                                 <!-- Text -->
                                                 <div>
@@ -1009,7 +1009,7 @@
                                             <div class="d-md-flex mb-4 ps-4 ps-md-5">
                                                 <!-- Avatar -->
                                                 <div class="avatar avatar-lg me-4 flex-shrink-0">
-                                                    <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="avatar">
+                                                    <img class="avatar-img rounded-circle" src="{{ asset('front_assets/images/avatar/02.jpg') }}" alt="avatar">
                                                 </div>
                                                 <!-- Text -->
                                                 <div>
@@ -1030,7 +1030,7 @@
                                             <div class="d-md-flex my-4">
                                                 <!-- Avatar -->
                                                 <div class="avatar avatar-xl me-4 flex-shrink-0">
-                                                    <img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg" alt="avatar">
+                                                    <img class="avatar-img rounded-circle" src="{{ asset('front_assets/images/avatar/07.jpg') }}" alt="avatar">
                                                 </div>
                                                 <!-- Text -->
                                                 <div>
@@ -1196,7 +1196,7 @@
                                                 <div class="d-flex mb-4">
                                                     <!-- Avatar -->
                                                     <div class="avatar avatar-sm flex-shrink-0 me-2">
-                                                        <a href="#"> <img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg" alt=""> </a>
+                                                        <a href="#"> <img class="avatar-img rounded-circle" src="{{ asset('front_assets/images/avatar/09.jpg') }}" alt=""> </a>
                                                     </div>
 
                                                     <form class="w-100 d-flex">
@@ -1212,7 +1212,7 @@
                                                             <div class="d-flex mb-3">
                                                                 <!-- Avatar -->
                                                                 <div class="avatar avatar-sm flex-shrink-0">
-                                                                    <a href="#"><img class="avatar-img rounded-circle" src="assets/images/avatar/05.jpg" alt=""></a>
+                                                                    <a href="#"><img class="avatar-img rounded-circle" src="{{ asset('front_assets/images/avatar/05.jpg') }}" alt=""></a>
                                                                 </div>
                                                                 <div class="ms-2">
                                                                     <!-- Comment by -->
@@ -1241,7 +1241,7 @@
                                                                     <div class="d-flex">
                                                                         <!-- Avatar -->
                                                                         <div class="avatar avatar-xs flex-shrink-0">
-                                                                            <a href="#"><img class="avatar-img rounded-circle" src="assets/images/avatar/06.jpg" alt=""></a>
+                                                                            <a href="#"><img class="avatar-img rounded-circle" src="{{ asset('front_assets/images/avatar/06.jpg') }}" alt=""></a>
                                                                         </div>
                                                                         <!-- Comment by -->
                                                                         <div class="ms-2">
@@ -1277,7 +1277,7 @@
                                                             <div class="d-flex">
                                                                 <!-- Avatar -->
                                                                 <div class="avatar avatar-sm flex-shrink-0">
-                                                                    <a href="#"><img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt=""></a>
+                                                                    <a href="#"><img class="avatar-img rounded-circle" src="{{ asset('front_assets/images/avatar/02.jpg') }}" alt=""></a>
                                                                 </div>
                                                                 <div class="ms-2">
                                                                     <!-- Comment by -->
@@ -1322,7 +1322,7 @@
                                 <!-- Video START -->
                                 <div class="card shadow p-2 mb-4 z-index-9">
                                     <div class="overflow-hidden rounded-3">
-                                        <img src="assets/images/courses/4by3/01.jpg" class="card-img" alt="course image">
+                                        <img src="{{ asset('front_assets/images/courses/4by3/01.jpg') }}" class="card-img" alt="course image">
                                         <!-- Overlay -->
                                         <div class="bg-overlay bg-dark opacity-6"></div>
                                         <div class="card-img-overlay d-flex align-items-start flex-column p-3">
@@ -1417,7 +1417,7 @@
                                     <div class="row gx-3 mb-3">
                                         <!-- Image -->
                                         <div class="col-4">
-                                            <img class="rounded" src="assets/images/courses/4by3/21.jpg" alt="">
+                                            <img class="rounded" src="{{ asset('front_assets/images/courses/4by3/21.jpg') }}" alt="">
                                         </div>
                                         <!-- Info -->
                                         <div class="col-8">
@@ -1436,7 +1436,7 @@
                                     <div class="row gx-3">
                                         <!-- Image -->
                                         <div class="col-4">
-                                            <img class="rounded" src="assets/images/courses/4by3/18.jpg" alt="">
+                                            <img class="rounded" src="{{ asset('front_assets/images/courses/4by3/18.jpg') }}" alt="">
                                         </div>
                                         <!-- Info -->
                                         <div class="col-8">
@@ -1498,7 +1498,7 @@
                                 <div class="card p-2 border">
                                     <div class="rounded-top overflow-hidden">
                                         <div class="card-overlay-hover">
-                                            <img src="assets/images/courses/4by3/17.jpg" class="card-img-top" alt="course image">
+                                            <img src="{{ asset('front_assets/images/courses/4by3/17.jpg') }}" class="card-img-top" alt="course image">
                                         </div>
                                         <!-- Hover element -->
                                         <div class="card-img-overlay">
@@ -1527,7 +1527,7 @@
                                             </ul>
                                             <!-- Avatar -->
                                             <div class="avatar avatar-sm">
-                                                <img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg" alt="avatar">
+                                                <img class="avatar-img rounded-circle" src="{{ asset('front_assets/images/avatar/09.jpg') }}" alt="avatar">
                                             </div>
                                         </div>
                                         <!-- Divider -->
@@ -1550,7 +1550,7 @@
                                 <div class="card p-2 border">
                                     <div class="rounded-top overflow-hidden">
                                         <div class="card-overlay-hover">
-                                            <img src="assets/images/courses/4by3/18.jpg" class="card-img-top" alt="course image">
+                                            <img src="{{  asset('front_assets/images/courses/4by3/18.jpg') }}" class="card-img-top" alt="course image">
                                         </div>
                                         <!-- Hover element -->
                                         <div class="card-img-overlay">
@@ -1579,7 +1579,7 @@
                                             </ul>
                                             <!-- Avatar -->
                                             <div class="avatar avatar-sm">
-                                                <img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg" alt="avatar">
+                                                <img class="avatar-img rounded-circle" src="{{ asset('front_assets/images/avatar/07.jpg') }}" alt="avatar">
                                             </div>
                                         </div>
                                         <!-- Divider -->
@@ -1602,7 +1602,7 @@
                                 <div class="card p-2 border">
                                     <div class="rounded-top overflow-hidden">
                                         <div class="card-overlay-hover">
-                                            <img src="assets/images/courses/4by3/21.jpg" class="card-img-top" alt="course image">
+                                            <img src="{{ asset('front_assets/images/courses/4by3/21.jpg') }}" class="card-img-top" alt="course image">
                                         </div>
                                         <!-- Hover element -->
                                         <div class="card-img-overlay">
@@ -1631,7 +1631,7 @@
                                             </ul>
                                             <!-- Avatar -->
                                             <div class="avatar avatar-sm">
-                                                <img class="avatar-img rounded-circle" src="assets/images/avatar/05.jpg" alt="avatar">
+                                                <img class="avatar-img rounded-circle" src="{{ asset('front_assets/images/avatar/05.jpg') }}" alt="avatar">
                                             </div>
                                         </div>
                                         <!-- Divider -->
@@ -1654,7 +1654,7 @@
                                 <div class="card p-2 border">
                                     <div class="rounded-top overflow-hidden">
                                         <div class="card-overlay-hover">
-                                            <img src="assets/images/courses/4by3/20.jpg" class="card-img-top" alt="course image">
+                                            <img src="{{ asset('front_assets/images/courses/4by3/20.jpg') }}" class="card-img-top" alt="course image">
                                         </div>
                                         <!-- Hover element -->
                                         <div class="card-img-overlay">
@@ -1683,7 +1683,7 @@
                                             </ul>
                                             <!-- Avatar -->
                                             <div class="avatar avatar-sm">
-                                                <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="avatar">
+                                                <img class="avatar-img rounded-circle" src="{{ asset('front_assets/images/avatar/02.jpg') }}" alt="avatar">
                                             </div>
                                         </div>
                                         <!-- Divider -->

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('front_title')</title>
     <livewire:front.layout.header_styles/>
+    @livewireStyles
 </head>
 
 <body>
@@ -22,6 +23,7 @@
     <livewire:front.layout.footer/>
 
     <livewire:front.layout.footer_scripts/>
+    @livewireScripts
 </body>
 
 

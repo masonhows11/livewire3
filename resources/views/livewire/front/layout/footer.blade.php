@@ -78,11 +78,11 @@
                     <div class="row g-2 mt-2">
                         <!-- Google play store button -->
                         <div class="col-6 col-sm-4 col-md-3 col-lg-6">
-                            <a href="#"> <img src="front_assets/images/client/google-play.svg" alt=""> </a>
+                            <a href="#"> <img src="{{ asset('front_assets/images/client/google-play.svg') }}" alt=""> </a>
                         </div>
                         <!-- App store button -->
                         <div class="col-6 col-sm-4 col-md-3 col-lg-6">
-                            <a href="#"> <img src="front_assets/images/client/app-store.svg" alt="app-store"> </a>
+                            <a href="#"> <img src="{{asset('front_assets/images/client/app-store.svg')}}" alt="app-store"> </a>
                         </div>
                     </div> <!-- Row END -->
                 </div>
@@ -108,9 +108,9 @@
                                             <i class="fas fa-globe me-2"></i>زبان ها
                                         </a>
                                         <ul class="dropdown-menu min-w-auto" aria-labelledby="languageSwitcher">
-                                            <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="front_assets/images/flags/uk.svg" alt="">فارسی</a></li>
-                                            <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="front_assets/images/flags/gr.svg" alt="">انگلیسی </a></li>
-                                            <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="front_assets/images/flags/sp.svg" alt="">فرانسوی</a></li>
+                                            <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="{{ asset('front_assets/images/flags/uk.svg') }}" alt="">فارسی</a></li>
+                                            <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="{{ asset('front_assets/images/flags/gr.svg')}}" alt="">انگلیسی </a></li>
+                                            <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="{{ asset('front_assets/images/flags/sp.svg') }}" alt="">فرانسوی</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -122,7 +122,7 @@
                 </div>
             </div>
         </div>
-        
+
     </footer>
 
 </div>

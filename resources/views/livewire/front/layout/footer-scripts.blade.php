@@ -15,7 +15,8 @@
     <!-- rtl-theme script-->
     <script src="https://files-de.rtl-theme.com/jsdemos/79df7d11747f944da7628dfc1c76f709661cfe8f.js?pid=257550"></script>
     {{-- <script type="text/javascript" src="{{ asset('js/app.js') }}"></script> --}}
-    @livewireScripts
+
+
 
 
 </div>

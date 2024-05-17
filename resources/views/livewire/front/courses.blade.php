@@ -91,7 +91,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/08.jpg" class="card-img-top" alt="course image">
+                                <img src="front_assets/images/courses/4by3/08.jpg" class="card-img-top" alt="course image">
                                 <!-- Card body -->
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
@@ -134,7 +134,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/02.jpg" class="card-img-top" alt="course image">
+                                <img src="front_assets/images/courses/4by3/02.jpg" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -176,7 +176,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/03.jpg" class="card-img-top" alt="course image">
+                                <img src="front_assets/images/courses/4by3/03.jpg" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -219,7 +219,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/07.jpg" class="card-img-top" alt="course image">
+                                <img src="{{  asset('front_assets/images/courses/4by3/07.jpg') }}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -262,7 +262,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/11.jpg" class="card-img-top" alt="course image">
+                                <img src="{{ asset('front_assets/images/courses/4by3/11.jpg') }}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -305,7 +305,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/12.jpg" class="card-img-top" alt="course image">
+                                <img src="{{ asset('front_assets/images/courses/4by3/12.jpg') }}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -348,7 +348,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/05.jpg" class="card-img-top" alt="course image">
+                                <img src="{{ asset('front_assets/images/courses/4by3/05.jpg') }}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -391,7 +391,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/06.jpg" class="card-img-top" alt="course image">
+                                <img src="{{ asset('front_assets/images/courses/4by3/06.jpg') }}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -433,7 +433,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/10.jpg" class="card-img-top" alt="course image">
+                                <img src="{{ asset('front_assets/images/courses/4by3/10.jpg') }}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -475,7 +475,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/13.jpg" class="card-img-top" alt="course image">
+                                <img src="{{ asset('front_assets/images/courses/4by3/13.jpg') }}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -518,7 +518,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/01.jpg" class="card-img-top" alt="course image">
+                                <img src="{{ asset('front_assets/images/courses/4by3/01.jpg') }}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">
@@ -561,7 +561,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <div class="card shadow h-100">
                                 <!-- Image -->
-                                <img src="assets/images/courses/4by3/04.jpg" class="card-img-top" alt="course image">
+                                <img src="{{ asset('front_assets/images/courses/4by3/04.jpg') }}" class="card-img-top" alt="course image">
                                 <div class="card-body pb-0">
                                     <!-- Badge and favorite -->
                                     <div class="d-flex justify-content-between mb-2">

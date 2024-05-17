@@ -10,6 +10,6 @@
  <!-- Theme CSS -->
  <link rel="stylesheet" type="text/css" href="{{ asset('front_assets/css/style-rtl.css') }}">
  {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
- @livewireStyles
+
 
 </div>
