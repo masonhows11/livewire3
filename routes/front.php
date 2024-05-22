@@ -21,15 +21,14 @@ use App\Livewire\Front\Courses;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
 
 
 // Route::get('/', [HomeController::class,'home'])->name('home');
-require __DIR__.'/admin.php';
+// require __DIR__.'/admin.php';
+// require __DIR__.'/front.php';
 
-Route::get('/', Home::class)->name('home');
+// Route::get('/', Home::class)->name('home');
 
 Route::get('/courses', Courses::class)->name('courses');
 Route::get('/course/details', CourseDetails::class)->name('course.details');
