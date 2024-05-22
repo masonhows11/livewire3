@@ -24,7 +24,6 @@ class UserList extends Component
     public $password;
     #[Validate('nullable|sometimes|max:2048')]
     public $image;
-
     public $search;
 
 
@@ -33,8 +32,6 @@ class UserList extends Component
     {
 
         $this->validate();
-
-
         if ($this->image != null) {
             $name = time() . '.' . $this->image->getClientOriginalExtension();
 
@@ -44,7 +41,6 @@ class UserList extends Component
         } else {
             $name = null;
         }
-
         User::create([
             'name' => $this->name,
             'email' => $this->email,
