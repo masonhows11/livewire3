@@ -90,6 +90,16 @@
                             </div>
                         </div>
 
+                        <div class="col-md-4">
+                            <div class="form-group row">
+                                @if ($image)
+                                <img width="150" height="150"  src="{{ $image->temporaryUrl() }}"  class="img-thumbnail" alt="image">
+                                @else
+                                <img width="150" height="150" src="{{ asset('default_image/no-image-icon-23494.png') }}"   class="img-thumbnail" alt="image">
+                                @endif
+                            </div>
+                        </div>
+
 
                         <div class="col-md-12 d-flex justify-content-start">
                             <div class="form-group row">
@@ -135,8 +145,13 @@
                                 <td class="text-center align-middle">{{ $user->id }}</td>
                                 <td class="text-center align-middle">
                                     <figure class="avatar">
+                                        @if($user->image != null )
+                                        <img src="{{ asset('storage/photos/'.$user->image) }}"
+                                        class="rounded-circle" alt="image">
+                                        @else
                                         <img src="{{ asset('default_image/no-image-icon-23494.png') }}"
-                                            class="rounded-circle" alt="image">
+                                        class="rounded-circle" alt="image">
+                                        @endif
                                     </figure>
                                 </td>
                                 <td class="text-center align-middle">{{ $user->name }}</td>
