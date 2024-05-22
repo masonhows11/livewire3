@@ -55,7 +55,7 @@
 
                 </table>
                 <div style="margin: 40px !important;" class="pagination pagination-rounded pagination-sm d-flex justify-content-center">
-                    {{ $users->links('vendor.pagination.bootstrap-5') }}
+                    {{ $users->links(data: ['scrollTo' => false]) }}
                 </div>
             </div>
         </div>

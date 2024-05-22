@@ -39,7 +39,7 @@ return [
     */
 
     'layout' => 'components.layouts.app',
-    //'layout' => 'front_end.include.master',
+
     /*
     |---------------------------------------------------------------------------
     | Lazy Loading Placeholder
@@ -156,5 +156,5 @@ return [
     |
     */
 
-    'pagination_theme' => 'tailwind',
+    'pagination_theme' => 'bootstrap',
 ];

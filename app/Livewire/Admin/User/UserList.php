@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 class UserList extends Component
 {
     use WithPagination;
-    protected $paginationTheme="bootstrap";
+    protected $paginationTheme = 'bootstrap';
 
     public $name;
     public $email;
