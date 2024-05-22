@@ -111,7 +111,7 @@
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">عنوان جستجو</label>
                     <div class="col-sm-10">
-                        <input type="text" class="text-left form-control" dir="rtl" wire:model.live="search">
+                        <input type="text" class="text-left form-control" dir="rtl" wire:model.live.debounce.250ms="search">
                     </div>
                 </div>
                 <table class="table table-striped table-hover">
