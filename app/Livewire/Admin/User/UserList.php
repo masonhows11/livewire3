@@ -13,9 +13,9 @@ class UserList extends Component
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
 
-    #[Validate('required|min:3|max:25|email|unique:users')]
+    #[Validate('required|min:3|max:30|email|unique:users')]
     public $name;
-     #[Validate('required|min:3|max:25|email|unique:users')]
+     #[Validate('required|min:3|max:30|email|unique:users')]
     public $email;
     #[Validate('required|digits:11')]
     public $mobile;
@@ -48,7 +48,12 @@ class UserList extends Component
 
     public function render()
     {
+       $users =  User::query()
+         ->where('name','like','%'.$this->search.'%')
+         ->orWhere('email','like','%'.$this->search.'%')
+         ->orWhere('mobile','like','%'.$this->search.'%')
+         ->paginate(3);
 
-        return view('livewire.admin.user.user-list',['users' => User::query()->paginate(3)]);
+        return view('livewire.admin.user.user-list',['users' => $users ]);
     }
 }

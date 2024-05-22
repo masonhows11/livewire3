@@ -91,7 +91,7 @@
                         </div>
 
 
-                        <div class="col-md-4 d-flex justify-content-around">
+                        <div class="col-md-12 d-flex justify-content-start">
                             <div class="form-group row">
                                 <button type="submit" class="btn btn-success btn-uppercase">
                                     <i class="ti-check-box m-r-5"></i> ذخیره
@@ -111,7 +111,7 @@
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">عنوان جستجو</label>
                     <div class="col-sm-10">
-                        <input type="text" class="text-left form-control" dir="rtl" wire:model="search">
+                        <input type="text" class="text-left form-control" dir="rtl" wire:model.live="search">
                     </div>
                 </div>
                 <table class="table table-striped table-hover">
