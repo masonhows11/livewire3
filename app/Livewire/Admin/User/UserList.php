@@ -78,9 +78,7 @@ class UserList extends Component
             session()->flash('success', 'کاربر جدید ایجاد شد');
         } else {
 
-
             $this->validate([
-
                 'name' => 'required|min:3|max:30|unique:users,name,'.$this->user_id,
                 'email' => 'required|min:3|max:30|unique:users,email,'.$this->user_id,
                 'mobile' => 'required|min:11|max:11|unique:users,mobile,'.$this->user_id,
@@ -90,10 +88,7 @@ class UserList extends Component
 
             if ($this->image != null) {
                 $name = time() . '.' . $this->image->getClientOriginalExtension();
-
                 $this->image->storeAs('photos',$name,'public');
-
-                // $this->image->store('photos');
             } else {
                 $name = null;
             }
@@ -106,10 +101,8 @@ class UserList extends Component
                 'image' => $this->image ? $name : $this->user->image,
 
             ]);
-
             $this->reset('name', 'email', 'image', 'mobile', 'password');
             session()->flash('success', 'کاربر با موفقیت بروز رسانی شد');
-
         }
 
 
