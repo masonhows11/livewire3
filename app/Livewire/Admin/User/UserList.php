@@ -17,6 +17,7 @@ class UserList extends Component
     public $mobile;
     public $password;
     public $image;
+    public $search;
 
 
 
