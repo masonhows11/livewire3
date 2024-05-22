@@ -171,9 +171,9 @@
                                     <span class="cursor-pointer badge badge-success">فعال</span>
                                 </td>
                                 <td class="text-center align-middle">
-                                    <a class="btn btn-outline-info" href="#">
+                                    <button class="btn btn-outline-info" wire:click="edit({{ $user->id }})">
                                         ویرایش
-                                    </a>
+                                    </button>
                                 </td>
                                 <td class="text-center align-middle">{{ $user->created_at }}</td>
                             </tr>

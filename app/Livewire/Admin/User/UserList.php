@@ -26,32 +26,84 @@ class UserList extends Component
     public $image;
     public $search;
 
+    public $user_id = null;
+    public $user = null;
+    public $edit_mode = null;
+
+
+    public function edit($user_id)
+    {
+
+
+        $user = User::findOrFail($user_id);
+        $this->name = $user->name;
+        $this->email = $user->email;
+        $this->mobile = $user->mobile;
+        $this->user_id = $user_id;
+        $this->user = $user;
+        // $this->password = $user->password;
+
+
+    }
 
 
     public function save()
     {
 
-        $this->validate();
-        if ($this->image != null) {
-            $name = time() . '.' . $this->image->getClientOriginalExtension();
+        if($this->edit_mode == 'null')
+        {
+            $this->validate();
 
-            $this->image->storeAs('photos',$name,'public');
+            if ($this->image != null) {
+                $name = time() . '.' . $this->image->getClientOriginalExtension();
 
-            // $this->image->store('photos');
+                $this->image->storeAs('photos',$name,'public');
+
+                // $this->image->store('photos');
+            } else {
+                $name = null;
+            }
+            User::create([
+                'name' => $this->name,
+                'email' => $this->email,
+                'mobile' => $this->mobile,
+                'password' => Hash::make($this->password),
+                'image' => $name,
+
+            ]);
+
+            $this->reset('name', 'email', 'image', 'mobile', 'password');
+            session()->flash('success', 'کاربر جدید ایجاد شد');
         } else {
-            $name = null;
+
+
+           // $this->validate();
+
+            if ($this->image != null) {
+                $name = time() . '.' . $this->image->getClientOriginalExtension();
+
+                $this->image->storeAs('photos',$name,'public');
+
+                // $this->image->store('photos');
+            } else {
+                $name = null;
+            }
+
+            User::where('id',$this->user_id)->update([
+                'name' => $this->name,
+                'email' => $this->email,
+                'mobile' => $this->mobile,
+                'password' => $this->password ? Hash::make($this->password) : $this->user->password,
+                'image' => $name,
+
+            ]);
+
+            $this->reset('name', 'email', 'image', 'mobile', 'password');
+            session()->flash('success', 'کاربر با موفقیت بروز رسانی شد');
+
         }
-        User::create([
-            'name' => $this->name,
-            'email' => $this->email,
-            'mobile' => $this->mobile,
-            'password' => Hash::make($this->password),
-            'image' => $name,
 
-        ]);
 
-        $this->reset('name', 'email', 'image', 'mobile', 'password');
-        session()->flash('success', 'کاربر جدید ایجاد شد');
     }
 
     public function render()
