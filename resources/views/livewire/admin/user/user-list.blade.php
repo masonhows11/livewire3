@@ -81,7 +81,12 @@
                         <div class="col-md-4">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="file"> آپلود عکس </label>
-                                <input class="col-sm-10" type="file" wire:model="image" class="form-control-file" id="file">
+                                <input class="col-sm-5" type="file" wire:model="image" class="form-control-file" id="file">
+                                <div class="col-sm-5">
+                                    <div wire:loading wire:target="image" class="spinner-border text-danger" role="status">
+                                        <span class="visually-hidden"></span>
+                                    </div>
+                                </div>
                                 @error('image')
                                 <span class="text-danger">
                                     {{ $message }}
