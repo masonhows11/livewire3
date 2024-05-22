@@ -32,9 +32,9 @@
                                     <img src="{{ asset('default_image/no-image-icon-23494.png') }}" class="rounded-circle" alt="image">
                                 </figure>
                             </td>
-                            <td class="text-center align-middle"></td>
-                            <td class="text-center align-middle"></td>
-                            <td class="text-center align-middle"></td>
+                            <td class="text-center align-middle">{{ $user->name }}</td>
+                            <td class="text-center align-middle">{{ $user->email}}</td>
+                            <td class="text-center align-middle">{{ $user->mobile}}</td>
                             <td class="text-center align-middle">
                                 <a class="btn btn-outline-info" href="#">
                                     نقش های کاربر
@@ -48,7 +48,7 @@
                                     ویرایش
                                 </a>
                             </td>
-                            <td class="text-center align-middle"></td>
+                            <td class="text-center align-middle">{{  $user->created_at }}</td>
                         </tr>
                         @endforeach
 

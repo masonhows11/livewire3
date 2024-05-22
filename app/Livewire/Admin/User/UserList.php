@@ -9,6 +9,7 @@ use Livewire\WithPagination;
 class UserList extends Component
 {
     use WithPagination;
+    protected $paginationTheme="bootstrap";
 
     public function render()
     {
