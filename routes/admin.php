@@ -20,9 +20,13 @@ use App\Http\Controllers\Admin\UserController;
 */
 
 
+Route::get('/panel', [PanelController::class, 'panel'])->name('admin.panel');
 
-Route::get('/panel', [PanelController::class,'panel'])->name('admin.panel');
+Route::get('/users', [UserController::class, 'users'])->name('admin.users');
 
-Route::get('/users', [UserController::class,'users'])->name('admin.users');
+Route::get('/create/user', [UserController::class, 'createUser'])->name('admin.user.create');
+    // Route::get('/admin/panel', [PanelController::class,'panel'])->name('admin.panel');
 
-Route::get('/create/user', [UserController::class,'createUser'])->name('admin.user.create');
+    // Route::get('/admin/users', [UserController::class,'users'])->name('admin.users');
+
+    // Route::get('/admin/create/user', [UserController::class,'createUser'])->name('admin.user.create');

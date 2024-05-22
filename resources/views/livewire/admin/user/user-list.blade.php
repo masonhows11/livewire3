@@ -23,8 +23,10 @@
                         </tr>
                     </thead>
                     <tbody>
+
+                        @foreach ($users as $user )
                         <tr>
-                            <td class="text-center align-middle"></td>
+                            <td class="text-center align-middle">{{  $user->id }}</td>
                             <td class="text-center align-middle">
                                 <figure class="avatar avatar">
                                     <img src="{{ asset('default_image/no-image-icon-23494.png') }}" class="rounded-circle" alt="image">
@@ -48,6 +50,8 @@
                             </td>
                             <td class="text-center align-middle"></td>
                         </tr>
+                        @endforeach
+
 
                 </table>
                 <div style="margin: 40px !important;"

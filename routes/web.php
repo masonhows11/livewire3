@@ -17,7 +17,7 @@ use App\Http\Controllers\ProfileController;
 
  Route::get('/', Home::class)->name('home');
 
-require __DIR__.'/admin.php';
+// require __DIR__.'/admin.php';
 require __DIR__.'/front.php';
 require __DIR__.'/auth.php';
 
