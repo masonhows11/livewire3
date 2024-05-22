@@ -1,4 +1,110 @@
 <div>
+
+    <div class="card">
+
+        <div class="card-body">
+            <div class="">
+                @if (session()->has('success'))
+                    <div class="alert alert-info">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="">
+                <h6 class="card-title">ایجاد کاربر</h6>
+                <form wire:submit="save">
+
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">نام و نام خانوادگی</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="text-left form-control" wire:model="name" dir="rtl" name="name">
+                                    @error('name')
+                                    <span class="text-danger">
+                                        {{ $message }}
+                                    </span>
+                                     @enderror
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">ایمیل</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="text-left form-control" wire:model="email"  dir="rtl" name="email">
+                                    @error('email')
+                                    <span class="text-danger">
+                                        {{ $message }}
+                                    </span>
+                                     @enderror
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">موبایل</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="text-left form-control" wire:model="mobile"   dir="rtl" name="mobile">
+                                    @error('mobile')
+                                    <span class="text-danger">
+                                        {{ $message }}
+                                    </span>
+                                     @enderror
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">پسورد</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="text-left form-control" wire:model="password"  dir="rtl" name="password">
+                                    @error('password')
+                                    <span class="text-danger">
+                                        {{ $message }}
+                                    </span>
+                                     @enderror
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label" for="file"> آپلود عکس </label>
+                                <input class="col-sm-10" type="file" wire:model="image" class="form-control-file" id="file">
+                                @error('image')
+                                <span class="text-danger">
+                                    {{ $message }}
+                                </span>
+                                 @enderror
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4 d-flex justify-content-around">
+                            <div class="form-group row">
+                                <button type="submit" class="btn btn-success btn-uppercase">
+                                    <i class="ti-check-box m-r-5"></i> ذخیره
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <div class="card">
         <div class="card-body">
             <div class="table overflow-auto" tabindex="8">
@@ -24,116 +130,41 @@
                     </thead>
                     <tbody>
 
-                        @foreach ($users as $user )
-                        <tr>
-                            <td class="text-center align-middle">{{  $user->id }}</td>
-                            <td class="text-center align-middle">
-                                <figure class="avatar">
-                                    <img src="{{ asset('default_image/no-image-icon-23494.png') }}" class="rounded-circle" alt="image">
-                                </figure>
-                            </td>
-                            <td class="text-center align-middle">{{ $user->name }}</td>
-                            <td class="text-center align-middle">{{ $user->email}}</td>
-                            <td class="text-center align-middle">{{ $user->mobile}}</td>
-                            <td class="text-center align-middle">
-                                <a class="btn btn-outline-info" href="#">
-                                    نقش های کاربر
-                                </a>
-                            </td>
-                            <td class="text-center align-middle">
-                                <span class="cursor-pointer badge badge-success">فعال</span>
-                            </td>
-                            <td class="text-center align-middle">
-                                <a class="btn btn-outline-info" href="#">
-                                    ویرایش
-                                </a>
-                            </td>
-                            <td class="text-center align-middle">{{  $user->created_at }}</td>
-                        </tr>
+                        @foreach ($users as $user)
+                            <tr>
+                                <td class="text-center align-middle">{{ $user->id }}</td>
+                                <td class="text-center align-middle">
+                                    <figure class="avatar">
+                                        <img src="{{ asset('default_image/no-image-icon-23494.png') }}"
+                                            class="rounded-circle" alt="image">
+                                    </figure>
+                                </td>
+                                <td class="text-center align-middle">{{ $user->name }}</td>
+                                <td class="text-center align-middle">{{ $user->email }}</td>
+                                <td class="text-center align-middle">{{ $user->mobile }}</td>
+                                <td class="text-center align-middle">
+                                    <a class="btn btn-outline-info" href="#">
+                                        نقش های کاربر
+                                    </a>
+                                </td>
+                                <td class="text-center align-middle">
+                                    <span class="cursor-pointer badge badge-success">فعال</span>
+                                </td>
+                                <td class="text-center align-middle">
+                                    <a class="btn btn-outline-info" href="#">
+                                        ویرایش
+                                    </a>
+                                </td>
+                                <td class="text-center align-middle">{{ $user->created_at }}</td>
+                            </tr>
                         @endforeach
 
 
                 </table>
-                <div style="margin: 40px !important;" class="pagination pagination-rounded pagination-sm d-flex justify-content-center">
+                <div style="margin: 40px !important;"
+                    class="pagination pagination-rounded pagination-sm d-flex justify-content-center">
                     {{ $users->links(data: ['scrollTo' => false]) }}
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-
-        <div class="card-body">
-            <div class="">
-                @if (session()->has('success'))
-                <div class="alert alert-info">
-                    {{ session('success'); }}
-                </div>
-            @endif
-
-            </div>
-        </div>
-
-        <div class="card-body">
-            <div class="">
-                <h6 class="card-title">ایجاد کاربر</h6>
-                <form  wire:submit="save">
-
-                    <div class="row">
-
-                        <div class="col-md-4">
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">نام و نام خانوادگی</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="text-left form-control" wire:model="name" dir="rtl" name="name">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">ایمیل</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="text-left form-control" wire:model="email" dir="rtl" name="email">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">موبایل</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="text-left form-control" wire:model="mobile" dir="rtl" name="mobile">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">پسورد</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="text-left form-control" wire:model="password" dir="rtl" name="password">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="file"> آپلود عکس </label>
-                                <input class="col-sm-10" type="file" wire:model="image" class="form-control-file" id="file">
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-4 d-flex justify-content-around">
-                            <div class="form-group row">
-                                <button type="submit" class="btn btn-success btn-uppercase">
-                                    <i class="ti-check-box m-r-5"></i> ذخیره
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-                </form>
             </div>
         </div>
     </div>
