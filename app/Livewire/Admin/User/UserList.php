@@ -5,12 +5,11 @@ namespace App\Livewire\Admin\User;
 use App\Models\User;
 use Livewire\Component;
 use Livewire\WithPagination;
-use Livewire\WithoutUrlPagination;
 use Illuminate\Support\Facades\Hash;
 
 class UserList extends Component
 {
-    use WithPagination,WithoutUrlPagination;
+    use WithPagination;
     protected $paginationTheme="bootstrap";
 
     public $name;
@@ -22,7 +21,8 @@ class UserList extends Component
 
 
 
-    public function save(){
+    public function save()
+    {
 
         User::create([
             'name' => $this->name,
@@ -38,6 +38,6 @@ class UserList extends Component
     public function render()
     {
 
-        return view('livewire.admin.user.user-list',['users' => User::query()->paginate(2)]);
+        return view('livewire.admin.user.user-list',['users' => User::query()->paginate(3)]);
     }
 }
