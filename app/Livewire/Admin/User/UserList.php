@@ -5,11 +5,12 @@ namespace App\Livewire\Admin\User;
 use App\Models\User;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Livewire\WithoutUrlPagination;
 use Illuminate\Support\Facades\Hash;
 
 class UserList extends Component
 {
-    use WithPagination;
+    use WithPagination,WithoutUrlPagination;
     protected $paginationTheme="bootstrap";
 
     public $name;

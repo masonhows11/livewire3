@@ -54,8 +54,7 @@
 
 
                 </table>
-                <div style="margin: 40px !important;"
-                    class="pagination pagination-rounded pagination-sm d-flex justify-content-center">
+                <div style="margin: 40px !important;" class="pagination pagination-rounded pagination-sm d-flex justify-content-center">
                     {{ $users->links() }}
                 </div>
             </div>
@@ -73,7 +72,7 @@
 
             </div>
         </div>
-       
+
         <div class="card-body">
             <div class="">
                 <h6 class="card-title">ایجاد کاربر</h6>
