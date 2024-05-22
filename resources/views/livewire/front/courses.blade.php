@@ -100,7 +100,7 @@
                                         <a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a>
                                     </div>
                                     <!-- Title -->
-                                    <h5 class="card-title fw-normal"><a href="#">آموزش Sketch</a></h5>
+                                    <h5 class="card-title fw-normal"><a href="{{ route('course.details') }}">آموزش Sketch</a></h5>
                                     <!-- Rating star -->
                                     <ul class="list-inline mb-0">
                                         <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i>
