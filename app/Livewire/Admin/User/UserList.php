@@ -14,16 +14,18 @@ class UserList extends Component
     use WithPagination,WithFileUploads;
     protected $paginationTheme = 'bootstrap';
 
-    #[Validate('required|min:3|max:30|unique:users')]
+    #[Validate('required|min:3|max:30|unique:users,name')]
     public $name;
-    #[Validate('required|min:3|max:30|email|unique:users')]
+    #[Validate('required|min:3|max:30|email|unique:users,email')]
     public $email;
-    #[Validate('required|digits:11')]
+    #[Validate('required|digits:11|unique:users,mobile')]
     public $mobile;
+
     #[Validate('required|min:6|max:20')]
     public $password;
     #[Validate('nullable|sometimes|max:2048')]
     public $image;
+
     public $search;
 
     public $user_id = null;
@@ -77,7 +79,14 @@ class UserList extends Component
         } else {
 
 
-           // $this->validate();
+            $this->validate([
+
+                'name' => 'required|min:3|max:30|unique:users,name,'.$this->user_id,
+                'email' => 'required|min:3|max:30|unique:users,email,'.$this->user_id,
+                'mobile' => 'required|min:11|max:11|unique:users,mobile,'.$this->user_id,
+                'password' => 'nullable|min:6|max:20',
+                'image' => 'nullable|sometimes|max:2048',
+            ]);
 
             if ($this->image != null) {
                 $name = time() . '.' . $this->image->getClientOriginalExtension();
@@ -94,7 +103,7 @@ class UserList extends Component
                 'email' => $this->email,
                 'mobile' => $this->mobile,
                 'password' => $this->password ? Hash::make($this->password) : $this->user->password,
-                'image' => $name,
+                'image' => $this->image ? $name : $this->user->image,
 
             ]);
 
