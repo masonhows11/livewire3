@@ -8,6 +8,7 @@ use Livewire\WithPagination;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Attributes\Validate;
 use Livewire\WithFileUploads;
+use Livewire\Attributes\Js;
 
 class UserList extends Component
 {
@@ -46,6 +47,15 @@ class UserList extends Component
         // $this->password = $user->password;
 
 
+    }
+
+    #[JS]
+    public function resetSearch()
+    {
+        return <<<'JS'
+        $wire.search = '';
+        JS;
+        //
     }
 
 
@@ -110,6 +120,7 @@ class UserList extends Component
 
     public function render()
     {
+       // $this->js("alert('page reload')");
         $users =  User::query()
             ->where('name', 'like', '%' . $this->search . '%')
             ->orWhere('email', 'like', '%' . $this->search . '%')

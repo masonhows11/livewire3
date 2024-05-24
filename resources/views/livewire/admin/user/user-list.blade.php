@@ -143,6 +143,10 @@
                             <button type="submit" wire:click="$set('search','')" class="btn btn-success btn-uppercase">
                                 <i class="ti-check-box m-r-5"></i> پاک کردن
                             </button>
+
+                            {{-- <button type="submit" wire:click="resetSearch" class="btn btn-success btn-uppercase">
+                                <i class="ti-check-box m-r-5"></i> پاک کردن فرم با js
+                            </button> --}}
                         </div>
 
                     </div>
