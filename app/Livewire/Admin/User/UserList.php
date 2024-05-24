@@ -114,7 +114,7 @@ class UserList extends Component
             ->where('name', 'like', '%' . $this->search . '%')
             ->orWhere('email', 'like', '%' . $this->search . '%')
             ->orWhere('mobile', 'like', '%' . $this->search . '%')
-            ->paginate(3);
+            ->paginate(10);
 
         return view('livewire.admin.user.user-list', ['users' => $users]);
     }

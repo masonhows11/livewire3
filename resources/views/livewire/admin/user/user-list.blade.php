@@ -122,13 +122,34 @@
 
     <div class="card">
         <div class="card-body">
+
             <div class="table overflow-auto" tabindex="8">
+
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">عنوان جستجو</label>
                     <div class="col-sm-10">
                         <input type="text" class="text-left form-control" dir="rtl" wire:model.live.debounce.250ms="search">
                     </div>
                 </div>
+
+
+                <div class="form-group">
+                    <div class="d-flex justify-content-around">
+                        <div class="mr-10">
+                            <button type="button" wire:click="$refresh" class="btn btn-success btn-uppercase">
+                                <i class="ti-check-box m-r-5"></i> بروز رسانی
+                            </button>
+
+                            <button type="submit" wire:click="$set('search','')" class="btn btn-success btn-uppercase">
+                                <i class="ti-check-box m-r-5"></i> پاک کردن
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
                 <table class="table table-striped table-hover">
                     <thead class="thead-light">
                         <tr>
