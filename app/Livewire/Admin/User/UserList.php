@@ -49,14 +49,7 @@ class UserList extends Component
 
     }
 
-    #[JS]
-    public function resetSearch()
-    {
-        return <<<'JS'
-        $wire.search = '';
-        JS;
-        //
-    }
+
 
 
     public function save()
@@ -120,13 +113,7 @@ class UserList extends Component
 
     public function render()
     {
-       // $this->js("alert('page reload')");
-        $users =  User::query()
-            ->where('name', 'like', '%' . $this->search . '%')
-            ->orWhere('email', 'like', '%' . $this->search . '%')
-            ->orWhere('mobile', 'like', '%' . $this->search . '%')
-            ->paginate(10);
 
-        return view('livewire.admin.user.user-list', ['users' => $users]);
+        return view('livewire.admin.user.user-list');
     }
 }
