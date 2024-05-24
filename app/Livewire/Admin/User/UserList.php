@@ -4,6 +4,7 @@ namespace App\Livewire\Admin\User;
 
 use App\Models\User;
 use Livewire\Component;
+use Livewire\Attributes\Computed;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Attributes\Validate;
@@ -111,9 +112,27 @@ class UserList extends Component
 
     }
 
+    //// computed properties
+    // #[Computed()]
+    // public function users()
+    // {
+    //   return  $users =  User::query()
+    //     ->where('name', 'like', '%' . $this->search . '%')
+    //     ->orWhere('email', 'like', '%' . $this->search . '%')
+    //     ->orWhere('mobile', 'like', '%' . $this->search . '%')
+    //     ->paginate(10);
+    // }
+
     public function render()
     {
 
-        return view('livewire.admin.user.user-list');
+        $users =  User::query()
+        ->where('name', 'like', '%' . $this->search . '%')
+        ->orWhere('email', 'like', '%' . $this->search . '%')
+        ->orWhere('mobile', 'like', '%' . $this->search . '%')
+        ->paginate(10);
+        return view('livewire.admin.user.user-list',['users' => $users]);
+
+       // return view('livewire.admin.user.user-list');
     }
 }
