@@ -19,10 +19,15 @@ class Users extends Component
         //
     }
 
+    public function placeholder()
+    {
+        return view('livewire.admin.user.lazy');
+    }
+
     public function render()
     {
         // $this->js("alert('page reload')");
-        sleep(3);
+        // sleep(5);
         $users =  User::query()
             ->where('name', 'like', '%' . $this->search . '%')
             ->orWhere('email', 'like', '%' . $this->search . '%')

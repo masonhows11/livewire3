@@ -122,7 +122,7 @@
 
     <div class="card">
         <div class="card-body">
-    <livewire:admin.user.users lazy />
+    <livewire:admin.user.users lazy="on-load" />
         </div>
     </div>
 </div>
