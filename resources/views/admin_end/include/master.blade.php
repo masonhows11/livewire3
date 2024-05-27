@@ -23,8 +23,9 @@
 
     <!-- begin::main content -->
     @yield('panel_main_content')
-   
+
     @include('admin_end.include.footer_scripts')
 </body>
+@stack('admin_scripts')
 
 </html>
