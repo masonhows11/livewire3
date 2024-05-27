@@ -1,4 +1,21 @@
 <main class="main-content">
+
+    <div class="card">
+
+        <div class="card-body" x-data="{ name:'ali',changename(){
+                this.name = 'joe'
+          }
+        }">
+             {{-- <button class="btn btn-skype" x-on:click="alert('hi funkcing alpine js')">سلام شیر بزرگ</button>
+             <h3 x-text="name"></h3>
+             <button class="btn btn-primary" x-on:click="changename">تغییر نام</button> --}}
+
+           
+             <h3 x-text="name"></h3>
+             <button class="btn btn-primary" @click="changename">تغییر نام</button>
+
+        </div>
+    </div>
     <div class="card">
 
         {{-- <div class="card-body">
@@ -70,7 +87,7 @@
 document.addEventListener('alpine:init', () => {
 
          Alpine.data('firstdata', () => ({
-           
+
         }))
 
         // dropdown in parent div / element that contain our data
