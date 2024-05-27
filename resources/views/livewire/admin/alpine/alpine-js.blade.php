@@ -2,9 +2,9 @@
 
     <div class="card">
 
-        <div class="card-body" x-data="{ name:'ali',changename(){
-                this.name = 'joe'
-          }
+        <div class="card-body" x-data="{ name:'ali',
+                                        changename(){ this.name = 'joe'},
+                                        resetname(){ this.name = 'ali'}
         }">
              {{-- <button class="btn btn-skype" x-on:click="alert('hi funkcing alpine js')">سلام شیر بزرگ</button>
              <h3 x-text="name"></h3>
@@ -12,7 +12,12 @@
 
            
              <h3 x-text="name"></h3>
-             <button class="btn btn-primary" @click="changename">تغییر نام</button>
+             <button class="mt-3 btn btn-primary" @click="changename">تغییر نام کلیک</button>
+             <br>
+             <button class="mt-3 btn btn-primary" @dblclick="changename">تغییر نام دابل کلیک</button>
+             <br>
+             <button class="mt-3 btn btn-primary" @click="resetname">رفرش</button>
+
 
         </div>
     </div>
