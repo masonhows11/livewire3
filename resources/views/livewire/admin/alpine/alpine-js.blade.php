@@ -40,8 +40,18 @@
 
         </div> --}}
 
+        {{-- <div class="card-body" x-data="firstdata">
+            <h4  x-text="name"></h4>
+            <br/>
+            <h4  x-text="age"></h4>
+            <br/>
+            <h4  x-text="mobile"></h4>
+            <br>
+            <h4 x-text="family"></h4>
+        </div> --}}
 
-        <div class="card-body">
+
+        {{-- <div class="card-body">
 
             <div x-data="dropdown">
                 <button @click="toggle">نمایش محتوا</button>
@@ -51,20 +61,34 @@
                 </div>
             </div>
 
-        </div>
+        </div> --}}
 
     </div>
 </main>
 @push('admin_scripts')
 <script>
 document.addEventListener('alpine:init', () => {
-        Alpine.data('dropdown', () => ({
-            open: false,
 
-            toggle() {
-                this.open = ! this.open
-            },
+         Alpine.data('firstdata', () => ({
+           
         }))
+
+        // dropdown in parent div / element that contain our data
+        // Alpine.data('dropdown', () => ({
+        //     open: false,
+
+        //     toggle() {
+        //         this.open = ! this.open
+        //     },
+        // })),
+
+        // firstdata in parent div / element that contain our data
+        // Alpine.data('firstdata', () => ({
+        //     name:'ali',
+        //     age:35,
+        //     mobile:09917230927,
+        //     family:'hassan zadeh'
+        // }))
     })
 
     // document.addEventListener('alpine:init', () => {
