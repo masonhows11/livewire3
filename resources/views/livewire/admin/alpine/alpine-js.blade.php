@@ -28,7 +28,7 @@
         </div> --}}
 
 
-        <div class="card-body">
+        {{-- <div class="card-body">
 
             <div x-data="{ open: false }">
                 <button @click="open = ! open">نمایش محتوا</button>
@@ -38,10 +38,43 @@
                 </div>
             </div>
 
+        </div> --}}
+
+
+        <div class="card-body">
+
+            <div x-data="dropdown">
+                <button @click="toggle">نمایش محتوا</button>
+
+                <div x-show="open">
+                    سلام آلپاین شخمی
+                </div>
+            </div>
+
         </div>
 
     </div>
 </main>
 @push('admin_scripts')
+<script>
+document.addEventListener('alpine:init', () => {
+        Alpine.data('dropdown', () => ({
+            open: false,
 
+            toggle() {
+                this.open = ! this.open
+            },
+        }))
+    })
+
+    // document.addEventListener('alpine:init', () => {
+    //     Alpine.data('dropdown', () => ({
+    //         open: false,
+
+    //         toggle() {
+    //             this.open = ! this.open
+    //         },
+    //     }))
+    // })
+</script>
 @endpush
