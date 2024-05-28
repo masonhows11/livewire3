@@ -171,6 +171,30 @@
 
         </div>
 
+        <div x-data="{ number:5  }" class="card-body">
+
+            <h5> x-modelable </h5>
+
+            <div x-data="{ count:0 }">
+                <button @click="number++">افرایش</button>
+            </div>
+
+            تعداد :  <span x-text="number"></span>
+
+        </div>
+
+        <div x-data="{ number:5  }" class="card-body">
+
+            <h5> x-modelable </h5>
+
+            <div x-data="{ count:0 }" x-modelable="count" x-model="number">
+                <button @click="count++">افرایش</button>
+            </div>
+
+            تعداد :  <span x-text="number"></span>
+
+        </div>
+
     </div>
 
     <div class="card">
