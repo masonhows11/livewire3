@@ -295,6 +295,23 @@
 
         </div>
 
+
+
+        <div x-data="{ open:false }" class="card-body">
+
+
+            <h5> x-if </h5>
+            <h5>only use x-if with template tag </h5>
+
+            <button @click="open = ! open ">نمایش محتوا</button>
+
+
+            <template x-if="open">
+                <div>سلام شیر</div>
+            </template>
+
+        </div>
+
     </div>
 
     </div>
