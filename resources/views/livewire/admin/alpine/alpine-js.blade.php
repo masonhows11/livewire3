@@ -241,6 +241,20 @@
             </div>
         </div>
 
+
+        <div x-data="{ open: false }" class="card-body">
+
+
+            <h5> x-transition scale </h5>
+
+
+            <button @click="open = ! open ">نمایش</button>
+
+            <div x-show="open" x-transition.scale.80 >
+                سللاااااامممم 👋
+            </div>
+        </div>
+
     </div>
 
     <div class="card">
