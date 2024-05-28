@@ -2,25 +2,84 @@
 
     <div class="card">
 
-        <div class="card-body" x-data="{ name:'ali',
-                                        changename(){ this.name = 'joe'},
-                                        resetname(){ this.name = 'ali'}
+        <div class="card-body" x-data="{
+            name: 'ali',
+            changename() { this.name = 'joe' },
+            resetname() { this.name = 'ali' }
         }">
-             {{-- <button class="btn btn-skype" x-on:click="alert('hi funkcing alpine js')">سلام شیر بزرگ</button>
+            {{-- <button class="btn btn-skype" x-on:click="alert('hi funkcing alpine js')">سلام شیر بزرگ</button>
              <h3 x-text="name"></h3>
              <button class="btn btn-primary" x-on:click="changename">تغییر نام</button> --}}
 
-           
-             <h3 x-text="name"></h3>
-             <button class="mt-3 btn btn-primary" @click="changename">تغییر نام کلیک</button>
-             <br>
-             <button class="mt-3 btn btn-primary" @dblclick="changename">تغییر نام دابل کلیک</button>
-             <br>
-             <button class="mt-3 btn btn-primary" @click="resetname">رفرش</button>
+
+            <h3 x-text="name"></h3>
+            <button class="mt-3 btn btn-primary" @click="changename">تغییر نام کلیک</button>
+            <br>
+            <button class="mt-3 btn btn-primary" @dblclick="changename">تغییر نام دابل کلیک</button>
+            <br>
+            <button class="mt-3 btn btn-primary" @click="resetname">رفرش</button>
 
 
         </div>
+
     </div>
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <div x-data="{ open: false }">
+                <button @click="open = ! open">نمایش محتوا</button>
+
+                <div x-show="open">
+                   فاک یووووو
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <div x-data="{ open:false }">
+
+                <button @click="open = ! open ">
+                    s-show
+                </button>
+
+
+                <div x-show="open" y-transition>
+                    نمایش x-show
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="card-body">
+
+            <div x-data="{ open:false }">
+
+                <button @click="open = ! open ">
+                    s-show
+                </button>
+
+
+                <div x-show="open" x-transition>
+                    نمایش x-show
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <div class="card">
 
         {{-- <div class="card-body">
@@ -88,39 +147,39 @@
     </div>
 </main>
 @push('admin_scripts')
-<script>
-document.addEventListener('alpine:init', () => {
+    <script>
+        document.addEventListener('alpine:init', () => {
 
-         Alpine.data('firstdata', () => ({
+            Alpine.data('firstdata', () => ({
 
-        }))
+            }))
 
-        // dropdown in parent div / element that contain our data
-        // Alpine.data('dropdown', () => ({
-        //     open: false,
+            // dropdown in parent div / element that contain our data
+            // Alpine.data('dropdown', () => ({
+            //     open: false,
 
-        //     toggle() {
-        //         this.open = ! this.open
-        //     },
-        // })),
+            //     toggle() {
+            //         this.open = ! this.open
+            //     },
+            // })),
 
-        // firstdata in parent div / element that contain our data
-        // Alpine.data('firstdata', () => ({
-        //     name:'ali',
-        //     age:35,
-        //     mobile:09917230927,
-        //     family:'hassan zadeh'
-        // }))
-    })
+            // firstdata in parent div / element that contain our data
+            // Alpine.data('firstdata', () => ({
+            //     name:'ali',
+            //     age:35,
+            //     mobile:09917230927,
+            //     family:'hassan zadeh'
+            // }))
+        })
 
-    // document.addEventListener('alpine:init', () => {
-    //     Alpine.data('dropdown', () => ({
-    //         open: false,
+        // document.addEventListener('alpine:init', () => {
+        //     Alpine.data('dropdown', () => ({
+        //         open: false,
 
-    //         toggle() {
-    //             this.open = ! this.open
-    //         },
-    //     }))
-    // })
-</script>
+        //         toggle() {
+        //             this.open = ! this.open
+        //         },
+        //     }))
+        // })
+    </script>
 @endpush
