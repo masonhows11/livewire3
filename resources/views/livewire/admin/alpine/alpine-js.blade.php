@@ -195,6 +195,52 @@
 
         </div>
 
+
+
+        <div x-data="{ open: false }" class="card-body">
+
+
+            <h5> x-transition simple </h5>
+
+
+            <button @click="open = ! open ">نمایش</button>
+
+            <div x-show="open" x-transition>
+                سللاااااامممم 👋
+            </div>
+
+            {{-- <div x-show="open" x-transition.duration.500ms>
+                سللاااااامممم 👋
+            </div> --}}
+        </div>
+
+        <div x-data="{ open: false }" class="card-body">
+
+
+            <h5> x-transition duration </h5>
+
+
+            <button @click="open = ! open ">نمایش</button>
+
+            <div x-show="open" x-transition.duration.500ms>
+                سللاااااامممم 👋
+            </div>
+        </div>
+
+
+        <div x-data="{ open: false }" class="card-body">
+
+
+            <h5> x-transition enter leave duration </h5>
+
+
+            <button @click="open = ! open ">نمایش</button>
+
+            <div x-show="open" x-transition:enter.duration.500ms x-transition:leave.duration.400ms>
+                سللاااااامممم 👋
+            </div>
+        </div>
+
     </div>
 
     <div class="card">
