@@ -323,6 +323,28 @@
 
         </div>
 
+
+        <div x-data="{ open:false }" class="card-body">
+
+
+            <h5> x-cloak </h5>
+
+            <div x-data="{ open: false }">
+
+                <button @click="open = ! open ">
+                    s-show
+                </button>
+
+
+                <div x-cloak x-show="open" x-transition>
+                    نمایش x-show
+                </div>
+
+            </div>
+
+
+        </div>
+
     </div>
 
     </div>
