@@ -32,7 +32,7 @@
                 <button @click="open = ! open">نمایش محتوا</button>
 
                 <div x-show="open">
-                   فاک یووووو
+                    فاک یووووو
                 </div>
             </div>
 
@@ -45,7 +45,9 @@
 
         <div class="card-body">
 
-            <div x-data="{ open:false }">
+            <h5> x-show</h5>
+
+            <div x-data="{ open: false }">
 
                 <button @click="open = ! open ">
                     s-show
@@ -63,7 +65,9 @@
 
         <div class="card-body">
 
-            <div x-data="{ open:false }">
+            <h5> x-show</h5>
+
+            <div x-data="{ open: false }">
 
                 <button @click="open = ! open ">
                     s-show
@@ -74,6 +78,42 @@
                     نمایش x-show
                 </div>
 
+            </div>
+
+        </div>
+
+
+
+        <div class="card-body">
+
+            <h5> x-bind attr </h5>
+
+            <div x-data="{ placehoder: ' اینجا بنویس ... ' }">
+
+                <input type="text" x-bind:placeholder="placehoder">
+
+            </div>
+        </div>
+
+        <div class="card-body">
+
+            <h5> shortand x-bind attr </h5>
+
+            <div x-data="{ placehoder: ' اینجا بنویس ... ' }">
+
+                <input type="text" :placeholder="placehoder">
+
+            </div>
+        </div>
+
+        <div x-data="{ open:false }" class="card-body">
+
+            <h5>  x-bind class </h5>
+
+            <button @click="open = ! open ">نمایش محتوا</button>
+
+            <div :class="open ? 'custom-style mt-4 p-4' : 'custom-hidden ' ">
+                سلام شیر
             </div>
 
         </div>
