@@ -312,6 +312,17 @@
 
         </div>
 
+
+        <div x-data="{ open:false }" class="card-body">
+
+
+            <h5> x-effect </h5>
+            <div x-data="{ label: 'Hello' }" x-effect="console.log(label)">
+                <button @click="label += ' World!'">Change Message</button>
+            </div>
+
+        </div>
+
     </div>
 
     </div>
