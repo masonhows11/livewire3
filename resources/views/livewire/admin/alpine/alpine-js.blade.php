@@ -106,15 +106,68 @@
             </div>
         </div>
 
-        <div x-data="{ open:false }" class="card-body">
+        <div x-data="{ open: false }" class="card-body">
 
-            <h5>  x-bind class </h5>
+            <h5> x-bind class </h5>
 
             <button @click="open = ! open ">نمایش محتوا</button>
 
-            <div :class="open ? 'custom-style mt-4 p-4' : 'custom-hidden ' ">
+            <div :class="open ? 'custom-style mt-4 p-4' : 'custom-hidden '">
                 سلام شیر
             </div>
+
+        </div>
+
+        <div x-data="{ message: '' }" class="card-body">
+
+            <h5> x-model </h5>
+
+            <input type="text" x-model="message">
+
+            <input type="text" x-model="message">
+
+            <div>
+                <span x-text="message"></span>
+            </div>
+
+        </div>
+
+        <div x-data="{ message: '' }" class="card-body">
+
+            <h5> x-model </h5>
+
+            <input type="text" x-model="message">
+
+            <button @click="message = 'سلام' ">تغییر متن</button>
+
+        </div>
+
+
+        <div x-data="{ show: '' }" class="card-body">
+
+            <h5> x-model </h5>
+
+            <input type="checkbox" id="checkbox" x-model="show">
+
+            <label for="checkbox" x-text="show"></label>
+
+        </div>
+
+
+
+        <div x-data="{ colors:['red','orange','yellow'] }" class="card-body">
+
+            <h5> x-model </h5>
+
+            <input type="checkbox" value="red" x-model="colors">
+            <input type="checkbox" value="orange" x-model="colors">
+            <input type="checkbox" value="yellow" x-model="colors">
+
+            <div class="justify-center d-flex">
+                <div><span>رنگ ها: </span></div>
+                <div><span x-text="colors"></span></div>
+            </div>
+
 
         </div>
 
