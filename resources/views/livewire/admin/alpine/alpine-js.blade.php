@@ -155,7 +155,7 @@
 
 
 
-        <div x-data="{ colors:['red','orange','yellow'] }" class="card-body">
+        <div x-data="{ colors: ['red', 'orange', 'yellow'] }" class="card-body">
 
             <h5> x-model </h5>
 
@@ -171,27 +171,27 @@
 
         </div>
 
-        <div x-data="{ number:5  }" class="card-body">
+        <div x-data="{ number: 5 }" class="card-body">
 
             <h5> x-modelable </h5>
 
-            <div x-data="{ count:0 }">
+            <div x-data="{ count: 0 }">
                 <button @click="number++">افرایش</button>
             </div>
 
-            تعداد :  <span x-text="number"></span>
+            تعداد : <span x-text="number"></span>
 
         </div>
 
-        <div x-data="{ number:5  }" class="card-body">
+        <div x-data="{ number: 5 }" class="card-body">
 
             <h5> x-modelable </h5>
 
-            <div x-data="{ count:0 }" x-modelable="count" x-model="number">
+            <div x-data="{ count: 0 }" x-modelable="count" x-model="number">
                 <button @click="count++">افرایش</button>
             </div>
 
-            تعداد :  <span x-text="number"></span>
+            تعداد : <span x-text="number"></span>
 
         </div>
 
@@ -250,10 +250,52 @@
 
             <button @click="open = ! open ">نمایش</button>
 
-            <div x-show="open" x-transition.scale.80 >
+            <div x-show="open" x-transition.scale.80>
                 سللاااااامممم 👋
             </div>
         </div>
+
+
+
+        <div x-data="{ names: ['joe', 'ali', 'james', 'mason', 'ted'] }" class="card-body">
+
+            <h5> x-for </h5>
+
+            <ul>
+
+                <template x-for="name in names">
+                    <li x-text="name"></li>
+                </template>
+
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+    <div class="card">
+
+        <div x-data="{
+                names: [
+                    { id: 1, name: 'joe' },
+                    { id: 2, name: 'ali' },
+                    { id: 3, name: 'james' }
+                ]}"
+                 class="card-body">
+
+            <h5> x-for </h5>
+
+            <ul>
+
+                <template x-for="name in names">
+                    <li x-text="name.id + ' ' + name.name"></li>
+                </template>
+
+        </div>
+
+    </div>
 
     </div>
 
